@@ -435,3 +435,13 @@ section.toggleable.toggle-collapsed > *:not(h1):not(h2):not(h3):not(h4):not(h5):
     display: unset;
   }
 }
+
+
+
+.tools {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+
+  width: 10rem;
+}

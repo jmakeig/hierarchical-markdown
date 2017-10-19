@@ -21,3 +21,7 @@ function collapseAll(aboveLevel = 1, parent = document.body) {
     }
   }
 }
+
+document.querySelector('#CollapseAll').addEventListener('click', evt => {
+  collapseAll();
+});
