@@ -1,3 +1,8 @@
+const heading = document.querySelector('h1');
+if (heading && heading.textContent) {
+  document.title = heading.textContent;
+}
+
 const sections = document.querySelectorAll('section:not(.level1)');
 for (const section of sections) {
   section.classList.add('toggleable');
