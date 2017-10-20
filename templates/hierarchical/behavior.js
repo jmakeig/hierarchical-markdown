@@ -1,3 +1,8 @@
+const heading = document.querySelector('h1');
+if (heading && heading.textContent) {
+  document.title = heading.textContent;
+}
+
 const sections = document.querySelectorAll('section:not(.level1)');
 for (const section of sections) {
   section.classList.add('toggleable');
@@ -21,3 +26,7 @@ function collapseAll(aboveLevel = 1, parent = document.body) {
     }
   }
 }
+
+document.querySelector('#CollapseAll').addEventListener('click', evt => {
+  collapseAll();
+});
