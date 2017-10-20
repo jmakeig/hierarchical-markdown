@@ -371,7 +371,7 @@ section.toggleable:before {
 }
 
 section.level2.toggleable:before {
-  top: -0.5rem;
+  top: -0.75rem;
 }
 
 section.toggleable.toggle-collapsed:before {
@@ -428,7 +428,8 @@ section.toggleable.toggle-collapsed > *:not(h1):not(h2):not(h3):not(h4):not(h5):
     margin: 0;
     padding: 0;
   }
-  section.toggleable:before {
+  section.toggleable:before,
+  .tools {
     display: none;
   }
   section.toggleable.toggle-collapsed > *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
