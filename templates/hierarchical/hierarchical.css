@@ -351,11 +351,16 @@ body > section {
   border: none;
 }
 
-section.toggleable {
+.toggleable {
   position: relative;
+
+  cursor: nw-resize;
+}
+.toggleable.toggle-collapsed {
+  cursor: se-resize;
 }
 
-section.toggleable:before {
+.toggleable:before {
   position: absolute;
   top: -1rem;
   left: -1.6rem;
@@ -374,12 +379,42 @@ section.level2.toggleable:before {
   top: -0.75rem;
 }
 
-section.toggleable.toggle-collapsed:before {
+.toggleable.toggle-collapsed:before {
   content: '▸';
 }
 
-section.toggleable.toggle-collapsed > *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
+.toggleable.toggle-collapsed > *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(.psuedo-heading) {
   display: none;
+}
+
+.meta {
+  padding-bottom: 0.25em;
+
+  border-bottom: solid 1px #ccc;
+}
+.meta .psuedo-heading {
+  font-style: italic;
+}
+.meta.toggleable:before {
+  top: -0.75rem;
+
+  color: #ccc;
+}
+
+.meta dt {
+  margin-top: 0.5em;
+
+  font-weight: bold;
+}
+.meta dd {
+  margin-top: 0.5em;
+  margin-left: 0;
+}
+.meta tbody td {
+  vertical-align: top;
+}
+.meta tbody td:first-child {
+  white-space: nowrap;
 }
 
 
@@ -428,11 +463,11 @@ section.toggleable.toggle-collapsed > *:not(h1):not(h2):not(h3):not(h4):not(h5):
     margin: 0;
     padding: 0;
   }
-  section.toggleable:before,
+  .toggleable:before,
   .tools {
     display: none;
   }
-  section.toggleable.toggle-collapsed > *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
+  .toggleable.toggle-collapsed > *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
     display: unset;
   }
 }

@@ -30,3 +30,16 @@ function collapseAll(aboveLevel = 1, parent = document.body) {
 document.querySelector('#CollapseAll').addEventListener('click', evt => {
   collapseAll();
 });
+
+const now = new Date().toISOString().slice(0, 10);
+const lastUpdateDate =
+  document.querySelector('.meta table tbody td').textContent || now;
+
+const lastUpdated = document.querySelector('.last-updated');
+if (lastUpdated) {
+  lastUpdated.textContent = lastUpdateDate;
+}
+const lastBuilt = document.querySelector('.last-built');
+if (lastBuilt) {
+  lastBuilt.textContent = now;
+}
