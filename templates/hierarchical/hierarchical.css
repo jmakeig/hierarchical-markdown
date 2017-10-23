@@ -472,8 +472,15 @@ header.toggleable:before {
     padding: 0;
 
     color: black;
+    font-size: 10pt;
 
-    background-color: none;
+    background: none;
+  }
+  header {
+    padding-left: unset;
+  }
+  header > h1 {
+    margin-left: unset;
   }
   section {
     border: none;
@@ -491,10 +498,19 @@ header.toggleable:before {
     /* compensate for no padding on heading numbers */
     margin-right: 0;
     margin-left: -0.5rem;
+    padding: 0;
+    padding-top: 0.25rem;
+    padding-right: 0.25rem;
 
     color: black;
+    font-size: inherit;
 
     background: none;
+  }
+  h2:before,
+  section.level2:before {
+    padding-top: 0;
+    padding-left: 0.5rem;
   }
   pre,
   code {
@@ -512,8 +528,17 @@ header.toggleable:before {
   .tools {
     display: none;
   }
-  .toggleable.toggle-collapsed > *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
+  .toggleable.toggle-collapsed > *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(.pseudo-heading) {
     display: unset;
+  }
+  a[href*='//']:after {
+    font-style: italic;
+
+    content: ' <' attr(href) '>';
+  }
+  a:link,
+  a:visited {
+    color: #333 !important;
   }
 }
 
