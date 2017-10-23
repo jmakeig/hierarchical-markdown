@@ -402,7 +402,7 @@ section.level2.toggleable:before {
 }
 
 nav#TOC ul {
-  padding-left: 0.75em;
+  padding-left: 0.75rem;
 
   list-style: none;
 }
@@ -425,6 +425,7 @@ nav#TOC li {
 #TOC li.toggleable.toggle-collapsed > a {
   display: block;
 }
+.front-media.toggleable:before,
 .meta.toggleable:before,
 #TOC li.toggleable:before {
   top: 0;
@@ -432,6 +433,17 @@ nav#TOC li {
 
   color: #ccc;
   font-size: 0.9rem;
+}
+.front-media.toggleable:before {
+  top: 0.25rem;
+}
+
+.front-media.toggleable.toggle-collapsed > nav {
+  display: none;
+}
+.front-media.toggleable.toggle-collapsed > header {
+  /* Specificity override from the multiple *:not() selectors */
+  display: unset !important;
 }
 
 @media only screen and (min-width : 12000px) {

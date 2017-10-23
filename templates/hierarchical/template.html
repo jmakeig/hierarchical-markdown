@@ -33,6 +33,7 @@ $endfor$
 $for(include-before)$
 $include-before$
 $endfor$
+<div class="front-media toggleable">
 $if(title)$
 <header>
 <h1 class="title">$title$</h1>
@@ -40,15 +41,11 @@ $if(title)$
 $endif$
 $if(toc)$
 <nav id="$idprefix$TOC">
-<!-- $toc$ -->
+  <div><button id="CollapseAll">Collapse All</button></div>
 </nav>
 $endif$
-$body$
-
-<div class="tools">
-  <button id="CollapseAll">Collapse All</button>
 </div>
-
+$body$
 <!-- https://github.com/jgm/pandoc/issues/1572 -->
 <script type="text/javascript" src="/Users/jmakeig/.pandoc/templates/hierarchical/behavior.js"></script>
 $for(include-after)$
