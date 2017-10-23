@@ -376,28 +376,32 @@ section.level2.toggleable:before {
   display: none;
 }
 
-.meta {
-  padding-bottom: 0.25em;
-
-  border-bottom: solid 1px #ccc;
+header {
+  padding-left: 1rem;
 }
-.meta .psuedo-heading {
-  font-style: italic;
+header > h1 {
+  margin-left: -1rem;
 }
 
-.meta dt {
+.history > ul {
+  padding-left: 0;
+
+  list-style: none;
+}
+
+.history dt {
   margin-top: 0.5em;
 
   font-weight: bold;
 }
-.meta dd {
+.history dd {
   margin-top: 0.5em;
   margin-left: 0;
 }
-.meta tbody td {
+.history tbody td {
   vertical-align: top;
 }
-.meta tbody td:first-child {
+.history tbody td:first-child {
   white-space: nowrap;
 }
 
@@ -425,8 +429,8 @@ nav#TOC li {
 #TOC li.toggleable.toggle-collapsed > a {
   display: block;
 }
-.front-media.toggleable:before,
-.meta.toggleable:before,
+header.toggleable:before,
+.history.toggleable:before,
 #TOC li.toggleable:before {
   top: 0;
   left: -1rem;
@@ -434,17 +438,10 @@ nav#TOC li {
   color: #ccc;
   font-size: 0.9rem;
 }
-.front-media.toggleable:before {
+header.toggleable:before {
   top: 0.25rem;
 }
 
-.front-media.toggleable.toggle-collapsed > nav {
-  display: none;
-}
-.front-media.toggleable.toggle-collapsed > header {
-  /* Specificity override from the multiple *:not() selectors */
-  display: unset !important;
-}
 
 @media only screen and (min-width : 12000px) {
   nav#TOC {

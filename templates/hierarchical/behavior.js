@@ -34,7 +34,7 @@ document.querySelector('#CollapseAll').addEventListener('click', evt => {
 
 const now = new Date().toISOString().slice(0, 10);
 const lastUpdateDate =
-  document.querySelector('.meta table tbody td').textContent || now;
+  document.querySelector('.history ul strong').textContent || now;
 
 const lastUpdated = document.querySelector('.last-updated');
 if (lastUpdated) {

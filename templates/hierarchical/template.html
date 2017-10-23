@@ -33,18 +33,23 @@ $endfor$
 $for(include-before)$
 $include-before$
 $endfor$
-<div class="front-media toggleable">
 $if(title)$
-<header>
+<header class="toggleable toggle-collapsed">
 <h1 class="title">$title$</h1>
-</header>
-$endif$
+<div class="history toggleable toggle-collapsed">
+  <div class="psuedo-heading">Last updated
+    <span class="last-updated"></span>. Built
+    <span class="last-built"></span>.</div>
+$history$
+</div>
 $if(toc)$
 <nav id="$idprefix$TOC">
   <div><button id="CollapseAll">Collapse All</button></div>
 </nav>
 $endif$
-</div>
+</header>
+$endif$
+
 $body$
 <!-- https://github.com/jgm/pandoc/issues/1572 -->
 <script type="text/javascript" src="/Users/jmakeig/.pandoc/templates/hierarchical/behavior.js"></script>
