@@ -92,8 +92,10 @@ function getTOC(root = document.body) {
 function renderTOC(toc, levels = [0]) {
   const ul = document.createElement('ul');
   for (const item of toc) {
-    const a = document.createElement('a');
-    a.setAttribute('href', item.href);
+    const a = item.href
+      ? document.createElement('a')
+      : document.createElement('span');
+    if (item.href) a.setAttribute('href', item.href);
     // Increment the leaf level
     levels[levels.length - 1]++;
     const level = `${levels.join('.')}. `;
