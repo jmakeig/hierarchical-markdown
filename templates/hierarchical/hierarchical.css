@@ -551,3 +551,9 @@ header.toggleable:before {
 
   width: 10rem;
 }
+
+.outdent {
+  padding-left: 2em;
+
+  text-indent: -2em;
+}

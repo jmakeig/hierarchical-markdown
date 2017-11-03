@@ -44,6 +44,8 @@ $history$
 </div>
 $if(toc)$
 <nav id="$idprefix$TOC">
+  $if(url)$<div class="outdent">Published to <a href="$url$">$url$</a></div>$endif$
+  $if(vcs)$<div class="outdent">Managed at <a href="$vcs$">$vcs$</a></div>$endif$
   <div><button id="CollapseAll">Collapse All</button></div>
 </nav>
 $endif$
