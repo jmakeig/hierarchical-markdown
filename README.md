@@ -8,16 +8,15 @@ By default, Pandoc will look in the `--data-dir` for templates.
 
 ```bash
 #! /usr/bin/env bash
+
 pandoc \
-  --from=commonmark \
+  --from=markdown_strict+header_attributes+yaml_metadata_block+pipe_tables\
   --to=html5 \
   --self-contained \
   --template="hierarchical/template.html" \
   --section-divs \
   --output="$1.html" \
+  --toc \
+  --toc-depth=6 \
   "$1.md"
-
-echo "Wrote $1.html at $(date)"
-
-open -g "$1.html"
 ```
