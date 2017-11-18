@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Test</title>
+  <style type="text/css">
+    body {
+      padding: 2rem;
+      font-family: 'Helvetica Neue', Helvetica, sans-serif;
+    }
+
+    section {
+      padding: 0 1rem 1rem 1rem;
+      margin-left: 0.25rem;
+    }
+
+    section.toggleable {
+      border-left: dotted 0.5px #ccc;
+    }
+
+    section.toggleable:before {
+      display: inline-block;
+      content: '▼';
+      font-size: 50%;
+      width: 1rem;
+      text-align: center;
+      vertical-align: bottom;
+      padding: 1rem 0;
+      margin-left: -1.5rem;
+      margin-top: -1.5rem;
+    }
+
+    section.toggleable h1,
+    section.toggleable h2,
+    section.toggleable h3,
+    section.toggleable h4,
+    section.toggleable h5,
+    section.toggleable h6 {
+      margin-top: -2rem;
+      display: flex;
+      font-size: 1.5rem;
+      margin-bottom: -0.25rem;
+    }
+
+    section.toggleable h1:before,
+    section.toggleable h2:before,
+    section.toggleable h3:before,
+    section.toggleable h4:before,
+    section.toggleable h5:before,
+    section.toggleable h6:before {
+      content: '12.13.14';
+      margin-right: 0.5rem;
+      font-size: 0.75rem;
+      padding-top: 0.5rem;
+
+      color: orange;
+    }
+
+    p {
+      margin: 0.5em 0 1em 0;
+      line-height: 1.45;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <section class="level2 toggleable">
+    <h2>This Big Section with a Very Long Title That Should Wrap Over Multiple Lines that Will Break a Brittle Layout Really Badly</h2>
+    <p>Lorem ipsum dolor amet you probably haven't heard of them pok pok selvage butcher flexitarian gluten-free, subway tile la croix. Beard meh PBR&amp;B, chia mixtape bicycle rights hammock tbh yr bushwick. Banjo keytar pitchfork, ethical ramps occupy tofu YOLO. Salvia kickstarter iceland listicle vinyl. Man braid mlkshk vape neutra live-edge pop-up you probably haven't heard of them next level direct trade mixtape. Mustache dreamcatcher umami forage, brunch kale chips biodiesel unicorn direct trade put a bird on it chambray.</p>
+    <section class="level3 toggleable">
+      <h3>This Big Section with a Very Long Title That Should Wrap Over Multiple Lines that Will Break a Brittle Layout Really Badly</h3>
+      <p>Echo park kickstarter gluten-free cronut authentic narwhal. Venmo hashtag snackwave live-edge kale chips. Kickstarter everyday carry forage fingerstache, keffiyeh tacos shaman messenger bag. Portland drinking vinegar food truck edison bulb cliche mixtape taiyaki. Lyft godard brooklyn wayfarers activated charcoal, williamsburg locavore microdosing viral. Irony asymmetrical vape pork belly food truck.</p>
+    </section>
+    <section class="level3 toggleable">
+      <h3>This Big Section with a Very Long Title That Should Wrap Over Multiple Lines that Will Break a Brittle Layout Really Badly</h3>
+      <p>Wolf cloud bread scenester tbh. Chicharrones ennui chambray, fashion axe cold-pressed master cleanse skateboard +1 bushwick church-key brunch craft beer man braid selvage. Sriracha everyday carry air plant ethical post-ironic raclette crucifix. Master cleanse biodiesel live-edge irony. YOLO truffaut blue bottle helvetica. Actually four dollar toast hella jianbing gastropub pok pok locavore etsy irony keytar, hot chicken direct trade knausgaard humblebrag. Biodiesel narwhal drinking vinegar slow-carb.</p>
+      <section class="level4 toggleable">
+        <h4>This Big Section with a Very Long Title That Should Wrap Over Multiple Lines that Will Break a Brittle Layout Really Badly</h4>
+        <p>Fixie palo santo prism wolf vexillologist, skateboard slow-carb. Asymmetrical migas distillery farm-to-table 90's, gastropub blue bottle 8-bit tilde bicycle rights. YOLO austin asymmetrical, synth pabst direct trade waistcoat lomo aesthetic post-ironic tilde offal. Microdosing iceland gochujang marfa, prism fingerstache chicharrones occupy jianbing distillery hot chicken air plant messenger bag austin everyday carry. Church-key gochujang kale chips chia fixie heirloom. Sartorial polaroid cold-pressed freegan +1 drinking vinegar meh beard butcher.</p>
+      </section>
+    </section>
+    <section class="level3 toggleable">
+      <h3>This Big Section with a Very Long Title That Should Wrap Over Multiple Lines that Will Break a Brittle Layout Really Badly</h3>
+      <p>Thundercats ethical 3 wolf moon adaptogen leggings etsy. 8-bit mustache hella master cleanse, retro readymade food truck occupy waistcoat raclette 3 wolf moon celiac paleo jean shorts. Aesthetic cornhole quinoa lo-fi. +1 yr beard affogato, food truck enamel pin cray iPhone ramps mlkshk.</p>
+    </section>
+  </section>
+</body>
+
+</html>

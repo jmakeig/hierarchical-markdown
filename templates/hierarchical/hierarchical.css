@@ -485,6 +485,14 @@ header.toggleable:before {
   section {
     border: none;
   }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    page-break-after: avoid;
+  }
   h2:before,
   section.level2:before,
   h3:before,
@@ -525,7 +533,8 @@ header.toggleable:before {
     padding: 0;
   }
   .toggleable:before,
-  .tools {
+  .tools,
+  button {
     display: none;
   }
   .toggleable.toggle-collapsed > *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(.pseudo-heading) {
