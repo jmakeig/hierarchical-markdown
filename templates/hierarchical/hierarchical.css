@@ -322,6 +322,9 @@ section.toggleable.level4:before {
 */
 @import url('https://fonts.googleapis.com/css?family=Inconsolata|Raleway|Trykker');
 
+html {
+  background: white;
+}
 body {
   font-family: 'Trykker';
 }
@@ -470,8 +473,11 @@ td.numeric {
 
 section {
   margin-top: 1.5rem;
-  margin-left: 0.25rem;
+  margin-left: -0.25rem;
   padding: 0 0 0 1rem;
+}
+body > section > section {
+  /* margin-left: 0; */
 }
 
 section.toggleable {
@@ -609,6 +615,14 @@ section.toggleable.level4:before {
   color: rgba(255, 149, 0, 1);
 }
 
+section.toggleable h5 {
+  border-color: rgba(0, 122, 255, 1);
+}
+
+section.toggleable.level5:before {
+  color: rgba(0, 122, 255, 1);
+}
+
 
 
 
@@ -658,4 +672,71 @@ nav#TOC ul ul {
 }
 nav#TOC li {
   margin: 0;
+}
+
+
+@media print {
+  @page {
+    margin: 0.5in;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+
+    color: black;
+    font-size: 10pt;
+
+    background: none;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    page-break-after: avoid;
+  }
+  pre,
+  code {
+    border: none;
+
+    color: inherit;
+
+    background: none;
+  }
+  code {
+    margin: 0;
+    padding: 0;
+  }
+  a[href*='//']:after {
+    font-style: italic;
+
+    content: ' <' attr(href) '>';
+  }
+  a:link,
+  a:visited {
+    color: #333 !important;
+  }
+  section {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+  }
+  section.toggleable {
+    border-left-style: none;
+  }
+  section.toggleable:before,
+  header.toggleable:before {
+    display: none;
+  }
+  header.toggleable > h1,
+  section.toggleable > h2,
+  section.toggleable > h3,
+  section.toggleable > h4,
+  section.toggleable > h5,
+  section.toggleable > h6,
+  section.toggleable > .pseudo-heading {
+    margin-top: unset;
+
+    border-bottom-style: none;
+  }
 }
