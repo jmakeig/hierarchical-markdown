@@ -12,7 +12,7 @@
     }
 
     section {
-      padding: 0 1rem 1rem 1rem;
+      padding: 0 0 0 1rem;
       margin-left: 0.25rem;
     }
 
@@ -23,13 +23,13 @@
     section.toggleable:before {
       display: inline-block;
       content: '▼';
-      font-size: 50%;
       width: 1rem;
       text-align: center;
       vertical-align: bottom;
-      padding: 1rem 0;
       margin-left: -1.5rem;
       margin-top: -1.5rem;
+      background: white;
+      padding-top: 0.5rem;
     }
 
     section.toggleable h1,
@@ -38,29 +38,103 @@
     section.toggleable h4,
     section.toggleable h5,
     section.toggleable h6 {
-      margin-top: -2rem;
-      display: flex;
+      border-bottom-style: solid;
+      border-width: 0.25rem;
+      margin-top: -1.5rem;
+      padding-bottom: 0.25rem;
       font-size: 1.5rem;
-      margin-bottom: -0.25rem;
     }
 
-    section.toggleable h1:before,
-    section.toggleable h2:before,
-    section.toggleable h3:before,
-    section.toggleable h4:before,
-    section.toggleable h5:before,
-    section.toggleable h6:before {
-      content: '12.13.14';
-      margin-right: 0.5rem;
-      font-size: 0.75rem;
-      padding-top: 0.5rem;
+    body {
+      counter-reset: h2;
+    }
 
-      color: orange;
+    section.toggleable>h2 {
+      counter-reset: h3;
+    }
+
+    section.toggleable>h3 {
+      counter-reset: h4;
+    }
+
+    section.toggleable>h4 {
+      counter-reset: h5;
+    }
+
+    section.toggleable>h5 {
+      counter-reset: h6;
+    }
+
+    section.toggleable h2:before {
+      content: counter(h2) '. ';
+      counter-increment: h2;
+    }
+
+    section.toggleable h3:before {
+      content: counter(h2) '.' counter(h3) '. ';
+      counter-increment: h3;
+    }
+
+    section.toggleable h4:before {
+      content: counter(h2) '.' counter(h3) '.' counter(h4) '. ';
+      counter-increment: h4;
+    }
+
+    section.toggleable h5:before {
+      content: counter(h2) '.' counter(h3) '.' counter(h4) '.' counter(h5) '. ';
+      counter-increment: h5;
+    }
+
+    section.toggleable h6:before {
+      content: counter(h2) '.' counter(h3) '.' counter(h4) '.' counter(h5) '.' counter(h6) '. ';
+      counter-increment: h6;
+    }
+
+    .toggleable.toggle-collapsed:before {
+      content: '►';
+    }
+
+    .toggleable.toggle-collapsed>*:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(.psuedo-heading) {
+      display: none;
     }
 
     p {
-      margin: 0.5em 0 1em 0;
       line-height: 1.45;
+    }
+
+    /*
+      Red:       rgba(255, 59, 48, 1)
+      Orange:    rgba(255, 149, 0, 1)
+      Yellow:    rgba(255, 204, 0, 1)
+      Green:     rgba(76, 217, 100, 1)
+      Teal Blue: rgba(90, 200, 250, 1)
+      Blue:      rgba(0, 122, 255, 1)
+      Purple:    rgba(88, 86, 214, 1)
+      Pink:      rgba(255, 45, 85, 1)
+    */
+
+    section.toggleable h2 {
+      border-color: rgba(76, 217, 100, 1);
+    }
+
+    section.toggleable.level2:before {
+      color: rgba(76, 217, 100, 1);
+    }
+
+    section.toggleable h3 {
+      border-color: rgba(88, 86, 214, 1);
+    }
+
+    section.toggleable.level3:before {
+      color: rgba(88, 86, 214, 1);
+    }
+
+    section.toggleable h4 {
+      border-color: rgba(255, 149, 0, 1);
+    }
+
+    section.toggleable.level4:before {
+      color: rgba(255, 149, 0, 1);
     }
 
   </style>
@@ -72,7 +146,7 @@
     <h2>This Big Section with a Very Long Title That Should Wrap Over Multiple Lines that Will Break a Brittle Layout Really Badly</h2>
     <p>Lorem ipsum dolor amet you probably haven't heard of them pok pok selvage butcher flexitarian gluten-free, subway tile la croix. Beard meh PBR&amp;B, chia mixtape bicycle rights hammock tbh yr bushwick. Banjo keytar pitchfork, ethical ramps occupy tofu YOLO. Salvia kickstarter iceland listicle vinyl. Man braid mlkshk vape neutra live-edge pop-up you probably haven't heard of them next level direct trade mixtape. Mustache dreamcatcher umami forage, brunch kale chips biodiesel unicorn direct trade put a bird on it chambray.</p>
     <section class="level3 toggleable">
-      <h3>This Big Section with a Very Long Title That Should Wrap Over Multiple Lines that Will Break a Brittle Layout Really Badly</h3>
+      <h3>Normal Heading</h3>
       <p>Echo park kickstarter gluten-free cronut authentic narwhal. Venmo hashtag snackwave live-edge kale chips. Kickstarter everyday carry forage fingerstache, keffiyeh tacos shaman messenger bag. Portland drinking vinegar food truck edison bulb cliche mixtape taiyaki. Lyft godard brooklyn wayfarers activated charcoal, williamsburg locavore microdosing viral. Irony asymmetrical vape pork belly food truck.</p>
     </section>
     <section class="level3 toggleable">
@@ -88,6 +162,14 @@
       <p>Thundercats ethical 3 wolf moon adaptogen leggings etsy. 8-bit mustache hella master cleanse, retro readymade food truck occupy waistcoat raclette 3 wolf moon celiac paleo jean shorts. Aesthetic cornhole quinoa lo-fi. +1 yr beard affogato, food truck enamel pin cray iPhone ramps mlkshk.</p>
     </section>
   </section>
+  <script type="text/javascript">
+    document.body.addEventListener('click', evt => {
+      if (evt.target && evt.target.matches('.toggleable')) {
+        evt.target.classList.toggle('toggle-collapsed');
+        evt.stopPropagation();
+      }
+    });
+  </script>
 </body>
 
 </html>
