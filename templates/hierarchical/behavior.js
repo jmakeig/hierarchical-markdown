@@ -117,9 +117,4 @@ function renderTOC(toc, levels = [0]) {
   return ul;
 }
 
-document
-  .querySelector('#TOC')
-  .insertBefore(
-    renderTOC(getTOC()),
-    document.querySelector('#CollapseAll').parentNode
-  );
+document.querySelector('#TOC').appendChild(renderTOC(getTOC()));

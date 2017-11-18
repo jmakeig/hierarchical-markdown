@@ -64,7 +64,7 @@ h1 {
 }
 p,
 ul,
-li,
+ol,
 dl,
 table,
 blockquote,
@@ -328,6 +328,16 @@ section.toggleable.level5:before {
 
 /** Structural components **/
 
+section.history {
+  border-left-style: none;
+}
+.history > .pseudo-heading {
+  display: flex;
+}
+.history > .pseudo-heading > * {
+  width: 50%;
+}
+
 .history > ul {
   padding-left: 0;
 
@@ -349,7 +359,14 @@ section.toggleable.level5:before {
   white-space: nowrap;
 }
 
+nav#TOC {
+  margin: 1rem 0;
+  padding: 0 1rem;
 
+  border-width: 1px;
+  border-style: solid none;
+  border-color: #aaa;
+}
 nav#TOC ul {
   padding-left: 0.75rem;
 
@@ -365,6 +382,30 @@ nav#TOC li {
   color: #ccc;
   font-size: 50%;
   vertical-align: middle;
+}
+
+ul.external {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  line-height: unset;
+  text-align: right;
+}
+ul.external li {
+  display: inline-block;
+
+  margin-left: 1em;
+}
+ul.external li:before {
+  display: inline-block;
+
+  margin-right: 0.5rem;
+
+  font-weight: bold;
+
+  content: '⇄';
 }
 
 /** Print view **/

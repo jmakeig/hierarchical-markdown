@@ -34,22 +34,23 @@ $for(include-before)$
 $include-before$
 $endfor$
 $if(title)$
-<header class="toggleable toggle-collapsed">
-<h1 class="title">$title$</h1>
-<section class="history toggleable toggle-collapsed">
-  <div class="pseudo-heading">Last updated
-    <span class="last-updated"></span>. Built
-    <span class="last-built"></span>.</div>
-$history$
-</section>
-$if(toc)$
-<nav id="$idprefix$TOC">
-  $if(url)$<div class="outdent">Published to <a href="$url$">$url$</a></div>$endif$
-  $if(vcs)$<div class="outdent">Managed at <a href="$vcs$">$vcs$</a></div>$endif$
-  <div><button id="CollapseAll">Collapse All</button></div>
-</nav>
-$endif$
-</header>
+  <header class="toggleable toggle-collapsed">
+    <h1 class="title">$title$</h1>
+    <section class="history toggleable toggle-collapsed">
+      <div class="pseudo-heading">
+        <div>Last updated <span class="last-updated"></span>. Built <span class="last-built"></span>.</div>
+        <ul class="external">
+          $if(url)$<li><a href="$url$">Published</a></li>$endif$
+          $if(vcs)$<li><a href="$vcs$">Managed</a></li>$endif$
+        </ul>
+      </div>
+      $history$
+    </section>
+    $if(toc)$
+    <nav id="$idprefix$TOC"></nav>
+    $endif$
+    <div><button id="CollapseAll">Collapse All</button></div>
+  </header>
 $endif$
 
 $body$
