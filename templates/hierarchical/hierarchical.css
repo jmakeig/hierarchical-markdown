@@ -1,21 +1,8 @@
-body {
-  height: 0;
-  max-width: 7.5in;
-  margin: auto;
-  padding: 0 1rem;
+/*
 
-  color: black;
-  font-family: 'Helvetica Neue', Helvetica, sans-serif;
-  font-size: 12pt;
-  line-height: 1.45;
-}
 
-a {
-  color: rgba(0, 122, 255, 1);
-}
-a:visited {
-  color: rgba(88, 86, 214, 1);
-}
+
+
 h1 a[href^='#'],
 h2 a[href^='#'],
 h3 a[href^='#'],
@@ -31,21 +18,7 @@ h6 a[href^='#'] {
   text-decoration: none;
 }
 
-a code {
-  color: inherit;
-}
 
-/*
-a[href^='#']:after {
-  content: '§';
-  content: '#';
-  display: inline-block;
-  margin-left: 0.25em;
-  color: #ccc;
-  font-size: 65%;
-  vertical-align: middle;
-}
-*/
 li {
   margin-top: 0.5em;
   margin-bottom: 0.5em;
@@ -60,72 +33,13 @@ code a {
   text-decoration: none;
 }
 
-pre,
-code {
-  padding: 0.25em;
 
-  border: solid 0.5px #ccc;
-  border-radius: 0.25em;
 
-  color: rgba(255, 45, 85, 1);
-  font-family: 'SF Mono', 'Input Mono', 'Inconsolata', 'Consolas', monospaced;
-  font-size: 10pt;
-}
 
-pre {
-  overflow: scroll;
 
-  width: 100%;
-  margin: 1em;
-  padding: 0.75em;
 
-  line-height: 1.55;
-}
 
-code {
-  padding: 0.1em 0.35em;
 
-  white-space: nowrap;
-}
-
-pre code {
-  margin: 0;
-  padding: 0;
-
-  border: none;
-
-  white-space: pre;
-}
-
-blockquote {
-  margin-left: 1em;
-  padding: 0 1em;
-
-  border-left: solid 0.25em #ddd;
-
-  color: #999;
-  font-style: italic;
-}
-li blockquote {
-  margin-left: 0;
-}
-
-hr {
-  height: 0.5px;
-
-  border: none;
-
-  background-color: #000;
-}
-
-blockquote em,
-blockquote strong {
-  font-weight: bold;
-}
-
-blockquote strong {
-  text-decoration: underline;
-}
 
 footer {
   padding-top: 0.5em;
@@ -141,240 +55,7 @@ table {
   border-collapse: collapse;
 }
 
-th {
-  background-color: #ededed;
-}
 
-td,
-th {
-  padding: 0.25em 0.5em !important;
-  /* ? */
-
-  border: solid 0.5px #ccc;
-
-  text-align: left;
-}
-
-td.numeric {
-  text-align: right;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-h1 + *,
-h2 + *,
-h3 + *,
-h4 + *,
-h5 + *,
-h6 + * {
-  clear: both;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: bold;
-  line-height: 1.1;
-}
-
-
-h1 {
-  font-size: 1.75rem;
-}
-
-h2 {
-  font-size: 1.5rem;
-}
-
-h3,
-h4,
-h5,
-h6 {
-  font-size: 1rem;
-}
-
-body {
-  counter-reset: h2;
-}
-
-h2 {
-  counter-reset: h3;
-}
-
-h3 {
-  counter-reset: h4;
-}
-
-h4 {
-  counter-reset: h5;
-}
-
-h5 {
-  counter-reset: h6;
-}
-
-h2:before,
-h3:before,
-h4:before,
-h5:before,
-h6:before {
-  float: left;
-
-  margin-top: -0.25rem;
-  margin-right: 0.5rem;
-  margin-bottom: 1em;
-  padding: 0.25rem 0.5rem;
-
-  border-radius: 0.25rem;
-
-  color: white;
-  font-size: 1rem;
-  vertical-align: baseline;
-
-  background-color: #ccc;
-}
-h2:before {
-  margin-top: unset;
-}
-
-h2:before {
-  content: counter(h2) '. ';
-  counter-increment: h2;
-}
-
-h3:before {
-  content: counter(h2) '.' counter(h3) '. ';
-  counter-increment: h3;
-}
-
-h4:before {
-  content: counter(h2) '.' counter(h3) '.' counter(h4) '. ';
-  counter-increment: h4;
-}
-
-h5:before {
-  content: counter(h2) '.' counter(h3) '.' counter(h4) '.' counter(h5) '. ';
-  counter-increment: h5;
-}
-
-h6:before {
-  content: counter(h2) '.' counter(h3) '.' counter(h4) '.' counter(h5) '.' counter(h6) '. ';
-  counter-increment: h6;
-}
-/*
-  Red:       rgba(255, 59, 48, 1)
-  Orange:    rgba(255, 149, 0, 1)
-  Yellow:    rgba(255, 204, 0, 1)
-  Green:     rgba(76, 217, 100, 1)
-  Teal Blue: rgba(90, 200, 250, 1)
-  Blue:      rgba(0, 122, 255, 1)
-  Purple:    rgba(88, 86, 214, 1)
-  Pink:      rgba(255, 45, 85, 1)
-*/
-
-h2:before {
-  color: rgba(38, 108, 50, 1);
-
-  background-color: rgba(76, 217, 100, 1);
-}
-
-section.level2:before {
-  color: rgba(76, 217, 100, 1);
-}
-
-h3:before {
-  color: rgba(0, 61, 127, 1);
-
-  background-color: rgba(0, 122, 255, 1);
-}
-
-section.level3:before {
-  color: rgba(0, 122, 255, 1);
-}
-
-h4:before {
-  color: rgba(44, 43, 107, 1);
-
-  background-color: rgba(88, 86, 214, 1);
-}
-
-section.level4:before {
-  color: rgba(88, 86, 214, 1);
-}
-
-h5:before {
-  color: rgba(127, 23, 42, 1);
-
-  background-color: rgba(255, 45, 85, 1);
-}
-
-section.level5:before {
-  color: rgba(255, 45, 85, 1);
-}
-
-h6:before {
-  color: rgba(127, 28, 24, 1);
-
-  background-color: rgba(255, 59, 48, 1);
-}
-
-section.level6:before {
-  color: rgba(255, 59, 48, 1);
-}
-section {
-  margin-left: 1.25rem;
-  padding-left: 0.75rem;
-
-  border-left: dotted 0.5px #ccc;
-}
-
-/* Don’t indent the top-level section */
-section.level2 {
-  margin-left: -0.75rem;
-}
-
-body > section {
-  border: none;
-}
-
-.toggleable {
-  position: relative;
-
-  cursor: default;
-}
-
-.toggleable:before {
-  position: absolute;
-  top: -1rem;
-  left: -1.6rem;
-  /* The two arrows have different widths */
-
-  display: inline-block;
-
-  width: 1.25rem;
-
-  font-size: 2rem;
-
-  content: '▾';
-}
-
-section.level2.toggleable:before {
-  top: -0.75rem;
-}
-
-.toggleable.toggle-collapsed:before {
-  content: '▸';
-}
-
-.toggleable.toggle-collapsed > *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(.psuedo-heading) {
-  display: none;
-}
 
 header {
   padding-left: 1rem;
@@ -413,19 +94,14 @@ nav#TOC ul {
 
 nav#TOC ul {
   padding-left: 0;
-
-  /* outline: solid 1px orange; */
 }
 nav#TOC ul ul {
   padding-left: 0.75em;
 }
 nav#TOC li {
   margin: 0;
-
-  /* outline: solid 1px red; */
 }
 
-/* <https://specificity.keegan.st> */
 #TOC li.toggleable.toggle-collapsed > a {
   display: block;
 }
@@ -442,6 +118,122 @@ header.toggleable:before {
   top: 0.25rem;
 }
 
+section {
+  margin-left: 0.25rem;
+  padding: 0 0 0 1rem;
+}
+
+section.toggleable {
+  border-left: dotted 0.5px #ccc;
+}
+
+section.toggleable:before {
+  display: inline-block;
+
+  width: 1rem;
+  margin-top: -1.5rem;
+  margin-left: -1.5rem;
+  padding-top: 0.5rem;
+
+  text-align: center;
+  vertical-align: bottom;
+
+  content: '▼';
+
+  background: white;
+}
+
+section.toggleable h1,
+section.toggleable h2,
+section.toggleable h3,
+section.toggleable h4,
+section.toggleable h5,
+section.toggleable h6 {
+  margin-top: -1.5rem;
+  padding-bottom: 0.25rem;
+
+  border-width: 0.25rem;
+  border-bottom-style: solid;
+
+  font-size: 1.5rem;
+}
+
+body {
+  counter-reset: h2;
+}
+
+section.toggleable > h2 {
+  counter-reset: h3;
+}
+
+section.toggleable > h3 {
+  counter-reset: h4;
+}
+
+section.toggleable > h4 {
+  counter-reset: h5;
+}
+
+section.toggleable > h5 {
+  counter-reset: h6;
+}
+
+section.toggleable h2:before {
+  content: counter(h2) '. ';
+  counter-increment: h2;
+}
+
+section.toggleable h3:before {
+  content: counter(h2) '.' counter(h3) '. ';
+  counter-increment: h3;
+}
+
+section.toggleable h4:before {
+  content: counter(h2) '.' counter(h3) '.' counter(h4) '. ';
+  counter-increment: h4;
+}
+
+section.toggleable h5:before {
+  content: counter(h2) '.' counter(h3) '.' counter(h4) '.' counter(h5) '. ';
+  counter-increment: h5;
+}
+
+section.toggleable h6:before {
+  content: counter(h2) '.' counter(h3) '.' counter(h4) '.' counter(h5) '.' counter(h6) '. ';
+  counter-increment: h6;
+}
+
+.toggleable.toggle-collapsed:before {
+  content: '►';
+}
+
+.toggleable.toggle-collapsed > *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(.psuedo-heading) {
+  display: none;
+}
+
+section.toggleable h2 {
+  border-color: rgba(76, 217, 100, 1);
+}
+
+section.toggleable.level2:before {
+  color: rgba(76, 217, 100, 1);
+}
+
+section.toggleable h3 {
+  border-color: rgba(88, 86, 214, 1);
+}
+
+section.toggleable.level3:before {
+  color: rgba(88, 86, 214, 1);
+}
+
+section.toggleable h4 {
+  border-color: rgba(255, 149, 0, 1);
+}
+
+section.toggleable.level4:before {
+  color: rgba(255, 149, 0, 1);
+}
 
 @media only screen and (min-width : 12000px) {
   nav#TOC {
@@ -503,7 +295,6 @@ header.toggleable:before {
   section.level5:before,
   h6:before,
   section.level6:before {
-    /* compensate for no padding on heading numbers */
     margin-right: 0;
     margin-left: -0.5rem;
     padding: 0;
@@ -565,4 +356,262 @@ header.toggleable:before {
   padding-left: 2em;
 
   text-indent: -2em;
+}
+*/
+body {
+  max-width: 7.5in;
+  margin: auto;
+  padding: 2rem;
+
+  font-family: 'Georgia', serif;
+  font-size: 12pt;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+
+  font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+p,
+ul,
+li,
+dl,
+table,
+blockquote {
+  line-height: 1.65;
+}
+a {
+  color: rgba(0, 122, 255, 1);
+}
+a:visited {
+  color: rgba(88, 86, 214, 1);
+}
+a code {
+  color: inherit;
+}
+
+pre,
+code {
+  padding: 0.25em;
+
+  border: solid 0.5px #ccc;
+  border-radius: 0.25em;
+
+  color: rgba(255, 45, 85, 1);
+  font-family: 'SF Mono', 'Input Mono', 'Inconsolata', 'Consolas', monospaced;
+  font-size: 10pt;
+}
+
+pre {
+  overflow: scroll;
+
+  width: 100%;
+  margin: 1em;
+  padding: 0.75em;
+
+  line-height: 1.55;
+}
+
+code {
+  padding: 0.1em 0.35em;
+
+  white-space: nowrap;
+}
+
+pre code {
+  margin: 0;
+  padding: 0;
+
+  border: none;
+
+  white-space: pre;
+}
+
+blockquote {
+  margin-left: 1em;
+  padding: 0 1em;
+
+  border-left: solid 0.25em #ddd;
+
+  color: #999;
+  font-style: italic;
+}
+li blockquote {
+  margin-left: 0;
+}
+
+blockquote em,
+blockquote strong {
+  font-weight: bold;
+}
+
+blockquote strong {
+  text-decoration: underline;
+}
+
+hr {
+  height: 0.5px;
+
+  border: none;
+
+  background-color: #000;
+}
+
+th {
+  background-color: #ededed;
+}
+
+td,
+th {
+  padding: 0.25em 0.5em !important;
+
+  border: solid 0.5px #ccc;
+
+  text-align: left;
+}
+
+td.numeric {
+  text-align: right;
+}
+
+
+
+
+
+
+
+section {
+  margin-top: 1.5rem;
+  margin-left: 0.25rem;
+  padding: 0 0 0 1rem;
+}
+
+section.toggleable {
+  border-left: dotted 0.5px #333;
+}
+section.toggleable.toggle-collapsed {
+  border-left-style: none;
+}
+
+section.toggleable:before {
+  display: inline-block;
+
+  width: 1rem;
+  margin-top: -1.5rem;
+  margin-left: -1.5rem;
+  padding-top: 0.5rem;
+
+  text-align: center;
+  vertical-align: bottom;
+
+  content: '▼';
+
+  background: white;
+}
+
+section.toggleable h1,
+section.toggleable h2,
+section.toggleable h3,
+section.toggleable h4,
+section.toggleable h5,
+section.toggleable h6 {
+  margin-top: -1.5rem;
+  padding-bottom: 0.25rem;
+
+  border-width: 1.5px;
+  border-bottom-style: solid;
+}
+
+body {
+  counter-reset: h2;
+}
+
+section.toggleable > h2 {
+  counter-reset: h3;
+}
+
+section.toggleable > h3 {
+  counter-reset: h4;
+}
+
+section.toggleable > h4 {
+  counter-reset: h5;
+}
+
+section.toggleable > h5 {
+  counter-reset: h6;
+}
+
+section.toggleable h2:before {
+  content: counter(h2) '. ';
+  counter-increment: h2;
+}
+
+section.toggleable h3:before {
+  content: counter(h2) '.' counter(h3) '. ';
+  counter-increment: h3;
+}
+
+section.toggleable h4:before {
+  content: counter(h2) '.' counter(h3) '.' counter(h4) '. ';
+  counter-increment: h4;
+}
+
+section.toggleable h5:before {
+  content: counter(h2) '.' counter(h3) '.' counter(h4) '.' counter(h5) '. ';
+  counter-increment: h5;
+}
+
+section.toggleable h6:before {
+  content: counter(h2) '.' counter(h3) '.' counter(h4) '.' counter(h5) '.' counter(h6) '. ';
+  counter-increment: h6;
+}
+
+.toggleable.toggle-collapsed:before {
+  content: '►';
+}
+
+.toggleable.toggle-collapsed > *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(.psuedo-heading) {
+  display: none;
+}
+
+/*
+  Red:       rgba(255, 59, 48, 1)
+  Orange:    rgba(255, 149, 0, 1)
+  Yellow:    rgba(255, 204, 0, 1)
+  Green:     rgba(76, 217, 100, 1)
+  Teal Blue: rgba(90, 200, 250, 1)
+  Blue:      rgba(0, 122, 255, 1)
+  Purple:    rgba(88, 86, 214, 1)
+  Pink:      rgba(255, 45, 85, 1)
+*/
+
+section.toggleable h2 {
+  border-color: rgba(76, 217, 100, 1);
+}
+
+section.toggleable.level2:before {
+  color: rgba(76, 217, 100, 1);
+}
+
+section.toggleable h3 {
+  border-color: rgba(88, 86, 214, 1);
+}
+
+section.toggleable.level3:before {
+  color: rgba(88, 86, 214, 1);
+}
+
+section.toggleable h4 {
+  border-color: rgba(255, 149, 0, 1);
+}
+
+section.toggleable.level4:before {
+  color: rgba(255, 149, 0, 1);
 }
