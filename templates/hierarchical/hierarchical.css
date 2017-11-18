@@ -64,44 +64,6 @@ header > h1 {
   margin-left: -1rem;
 }
 
-.history > ul {
-  padding-left: 0;
-
-  list-style: none;
-}
-
-.history dt {
-  margin-top: 0.5em;
-
-  font-weight: bold;
-}
-.history dd {
-  margin-top: 0.5em;
-  margin-left: 0;
-}
-.history tbody td {
-  vertical-align: top;
-}
-.history tbody td:first-child {
-  white-space: nowrap;
-}
-
-nav#TOC ul {
-  padding-left: 0.75rem;
-
-  list-style: none;
-}
-
-nav#TOC ul {
-  padding-left: 0;
-}
-nav#TOC ul ul {
-  padding-left: 0.75em;
-}
-nav#TOC li {
-  margin: 0;
-}
-
 #TOC li.toggleable.toggle-collapsed > a {
   display: block;
 }
@@ -358,13 +320,30 @@ section.toggleable.level4:before {
   text-indent: -2em;
 }
 */
+@import url('https://fonts.googleapis.com/css?family=Inconsolata|Raleway|Trykker');
+
+body {
+  font-family: 'Trykker';
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.pseudo-heading {
+  font-family: 'Raleway';
+}
+pre,
+code {
+  font-family: 'Inconsolata', 'Consolas', monospaced;
+}
 body {
   max-width: 7.5in;
   margin: auto;
   padding: 2rem;
 
-  font-family: 'Georgia', serif;
-  font-size: 12pt;
+  font-size: 11pt;
 }
 h1,
 h2,
@@ -374,16 +353,20 @@ h5,
 h6 {
   margin: 0;
 
-  font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
   font-size: 1.5rem;
+  font-weight: normal;
   line-height: 1;
+}
+h1 {
+  font-size: 2rem;
 }
 p,
 ul,
 li,
 dl,
 table,
-blockquote {
+blockquote,
+pre {
   line-height: 1.65;
 }
 a {
@@ -404,7 +387,6 @@ code {
   border-radius: 0.25em;
 
   color: rgba(255, 45, 85, 1);
-  font-family: 'SF Mono', 'Input Mono', 'Inconsolata', 'Consolas', monospaced;
   font-size: 10pt;
 }
 
@@ -493,13 +475,13 @@ section {
 }
 
 section.toggleable {
-  border-left: dotted 0.5px #333;
+  border-left: dotted 0.5px #aaa;
 }
 section.toggleable.toggle-collapsed {
   border-left-style: none;
 }
-
-section.toggleable:before {
+section.toggleable:before,
+header.toggleable:before {
   display: inline-block;
 
   width: 1rem;
@@ -515,17 +497,28 @@ section.toggleable:before {
   background: white;
 }
 
-section.toggleable h1,
-section.toggleable h2,
-section.toggleable h3,
-section.toggleable h4,
-section.toggleable h5,
-section.toggleable h6 {
+header.toggleable > h1,
+section.toggleable > h2,
+section.toggleable > h3,
+section.toggleable > h4,
+section.toggleable > h5,
+section.toggleable > h6,
+section.toggleable > .pseudo-heading {
   margin-top: -1.5rem;
   padding-bottom: 0.25rem;
 
   border-width: 1.5px;
   border-bottom-style: solid;
+}
+header.toggleable > h1,
+section.toggleable > .pseudo-heading {
+  border-bottom-style: none;
+}
+header.toggleable > h1 {
+  margin-top: -1.75rem;
+}
+section.toggleable > .pseudo-heading {
+  margin-top: -1.25rem;
 }
 
 body {
@@ -577,7 +570,7 @@ section.toggleable h6:before {
   content: '►';
 }
 
-.toggleable.toggle-collapsed > *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(.psuedo-heading) {
+.toggleable.toggle-collapsed > *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(.pseudo-heading) {
   display: none;
 }
 
@@ -614,4 +607,55 @@ section.toggleable h4 {
 
 section.toggleable.level4:before {
   color: rgba(255, 149, 0, 1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.history > ul {
+  padding-left: 0;
+
+  list-style: none;
+}
+
+.history dt {
+  margin-top: 0.5em;
+
+  font-weight: bold;
+}
+.history dd {
+  margin-top: 0.5em;
+  margin-left: 0;
+}
+.history tbody td {
+  vertical-align: top;
+}
+.history tbody td:first-child {
+  white-space: nowrap;
+}
+
+
+nav#TOC ul {
+  padding-left: 0.75rem;
+
+  list-style: none;
+}
+
+nav#TOC ul {
+  padding-left: 0;
+}
+nav#TOC ul ul {
+  padding-left: 0.75em;
+}
+nav#TOC li {
+  margin: 0;
 }

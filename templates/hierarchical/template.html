@@ -36,12 +36,12 @@ $endfor$
 $if(title)$
 <header class="toggleable toggle-collapsed">
 <h1 class="title">$title$</h1>
-<div class="history toggleable toggle-collapsed">
-  <div class="psuedo-heading">Last updated
+<section class="history toggleable toggle-collapsed">
+  <div class="pseudo-heading">Last updated
     <span class="last-updated"></span>. Built
     <span class="last-built"></span>.</div>
 $history$
-</div>
+</section>
 $if(toc)$
 <nav id="$idprefix$TOC">
   $if(url)$<div class="outdent">Published to <a href="$url$">$url$</a></div>$endif$
