@@ -182,9 +182,13 @@ td.numeric {
   vertical-align: bottom;
 
   content: '▼';
+
+  transition: transform 0.1s linear;
+  transform: rotate(0deg);
 }
 .toggleable.toggle-collapsed:before {
-  content: '►';
+  /* content: '►'; */
+  transform: rotate(-90deg);
 }
 
 /** Sections and headings **/
