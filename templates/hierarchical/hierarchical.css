@@ -189,6 +189,8 @@ td.numeric {
 .toggleable.toggle-collapsed:before {
   /* content: '►'; */
   transform: rotate(-90deg);
+
+  background: transparent !important;
 }
 
 /** Sections and headings **/
@@ -207,7 +209,8 @@ section.toggleable {
   border-left: dotted 0.5px #aaa;
 }
 section.toggleable.toggle-collapsed {
-  border-left-style: none;
+  /* Avoids horizontal shift */
+  border-left-color: transparent;
 }
 section.toggleable:before,
 header.toggleable:before {
