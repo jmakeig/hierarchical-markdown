@@ -117,4 +117,5 @@ function renderTOC(toc, levels = [0]) {
   return ul;
 }
 
-document.querySelector('#TOC').appendChild(renderTOC(getTOC()));
+const toc = document.querySelector('#TOC');
+if (toc) toc.appendChild(renderTOC(getTOC()));
