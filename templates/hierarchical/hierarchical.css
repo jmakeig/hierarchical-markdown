@@ -382,7 +382,19 @@ nav#TOC ul {
 nav#TOC li {
   margin: 0;
 }
-#TOC li.toggleable.toggle-collapsed > a {
+#TOC li:not(.toggleable):before {
+  display: inline-block;
+
+  width: 1rem;
+  margin-left: -1.5rem;
+
+  text-align: center;
+  vertical-align: bottom;
+
+  content: ' ';
+}
+#TOC li.toggleable.toggle-collapsed > a,
+#TOC li.toggleable.toggle-collapsed > span {
   display: unset;
 }
 #TOC li.toggleable:before {
