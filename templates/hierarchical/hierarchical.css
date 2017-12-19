@@ -77,9 +77,6 @@ a {
 a:visited {
   color: rgba(88, 86, 214, 1);
 }
-a code {
-  color: inherit;
-}
 
 pre,
 code {
@@ -87,9 +84,15 @@ code {
 
   border: solid 0.5px #ccc;
   border-radius: 0.25em;
+}
+pre,
+code,
+a code {
+  display: inline-block; /*<https://stackoverflow.com/a/25762563/563324> */
 
   color: rgba(255, 45, 85, 1);
   font-size: 10pt;
+  text-decoration: none;
 }
 
 pre {
@@ -137,6 +140,17 @@ blockquote strong {
 
 blockquote strong {
   text-decoration: underline;
+}
+
+blockquote code {
+  margin: 0;
+  padding: 0;
+
+  border: none;
+
+  color: inherit;
+
+  background: none;
 }
 
 hr {
